@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Tailwind Portfolio</title>
+</head>
+<body class="bg-gray-900">
+
+    <nav class="py-6 relative border-b border-transparent before:absolute before:left-0 before:bottom-0 before:w-full before:h-[4px] before:bg-[linear-gradient(90deg,#FFEAC2,#EED5A2,#745D29)]" id="gradient-border">
+        <div class="container mx-auto flex justify-between items-center" id="gradient-border-bottom">
+            <a class="text-light" href="#hero-image" id="cevat-text">
+                Shahad
+            </a>
+            <div class="hidden lg:flex lg:items-center lg:justify-end text-light text-gray-300" id="nav-links">
+                <a class="text-light mx-2" href="#hero-image">Hjem</a>
+                <a class="text-light mx-2" href="#om-mig">Om mig</a>
+                <a class="text-light mx-2" href="#projekter">Projekter</a>
+                <a class="text-light mx-2" href="../images/CV Shahad.pdf" target="_blank">CV</a>
+                <a class="text-light mx-2" href="#contact">Kontakt</a>
+            </div>
+            <button class="block lg:hidden p-4" id="burger" aria-expanded="false">
+                <img src="./images/menu-kopi.svg" alt="Menu" class="w-8 h-8">
+            </button>
+        </div>
+    </nav>
+
+      <section id="hero-image" class="h-screen flex items-center bg-gray-900">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+              
+                 <!-- Venstre kolonne med tekst og billede -->
+             <div class="hidden md:block">
+                   <img src="../images/hero,sideimag.png" alt="">
+              </div>    
+                 
+                 
+                
+                <div class="md:w-3/5  flex-col items-center">
+                    
+                   
+                        <h2 id="cevat-text" class="text-2xl font-caveat">Velkommen til min verden</h2>
+                        <h1 class="text-4xl font-bold text-light text-gray-300">Mit navn er Shahad,</h1>
+                        <h1 class="text-4xl font-bold text-light text-gray-300">og jeg er <span class="text-primary">Webudvikler</span></h1>
+                        <div class="flex space-x-4 mt-4">
+                            <a href="https://github.com/Shahad1991">
+                                <img src="../images/github.svg.svg" alt="Github" class="w-8 h-8 transition-transform transform hover:scale-110">
+                            </a>
+                            <a href="https://www.instagram.com/shahadnazaromhassoni/">
+                                <img src="../images/InstagramLogo.svg" alt="Instagram" class="w-8 h-8 transition-transform transform hover:scale-110">
+                            </a>
+                            <a href="https://www.linkedin.com/in/shahad-al-jawashee-41502a24b/">
+                                <img src="../images/linkdin.svg" alt="LinkedIn" class="w-8 h-8 transition-transform transform hover:scale-110">
+                            </a>
+                        </div>
+                        
+                    
+                </div>
+                
+
+                <!-- Højre kolonne med billede -->
+                <div class="md:w-2/5 relative mt-8 md:mt-0">
+                    <div class="w-full relative bg-no-repeat bg-cover h-[500px] rounded-xl overflow-hidden">
+                        <div class="absolute inset-0 bg-no-repeat bg-right w-full h-full" style="background-image: url('/images/hero-background.png'); z-index: -1;"></div>
+                        <img class="w-full rounded-t-lg" src="/images/myimag.png" alt="Hero image">
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="projekter" class="py-16">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl text-light  text-gray-300">Mine projekter</h1>
+                <h4 class="text-xl text-light mt-2" id="cevat-text">et indblik i mine kreative projekter</h4>
+            </div>
+            <div class="text-center mb-8">
+                <button id="btn-all" class="px-4 py-2 border-2 text-white bg-transparent rounded-full focus:outline-none transition-colors duration-300 relative" onclick="filterSelection('all', this)" id="gradient-border">
+                    Alle
+                </button>
+                <button id="btn-school" class="px-4 py-2 border-2 text-white bg-transparent rounded-full focus:outline-none transition-colors duration-300 relative" onclick="filterSelection('school', this)" id="gradient-border">
+                    Skole Projekter
+                </button>
+                <button id="btn-personal" class="px-4 py-2 border-2 text-white bg-transparent rounded-full focus:outline-none transition-colors duration-300 relative" onclick="filterSelection('personal', this)" id="gradient-border">
+                    Personlige Projekter
+                </button>
+            </div>
+            
+            
+            <div id="project-list" class="flex flex-wrap justify-center">
+                <div class="w-full h-full md:w-1/3 p-4 project-container school ">
+                    <div class=" bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover " src="../images/e-commerce.png" alt="E-Commerce">
+                        <div class="p-6">
+                            <h5 class="text-2xl font-bold" id="cevat-text">E-Commerce</h5>
+                            <p class="text-sm">@johnsmith</p>
+                            <p class="mt-4">Vi arbejdede med Lean Startup-processen for at designe en unik T-shirt og lancere en webshop, hvor vi sælger produktet. Ideen var at skabe et unikt design og markedsføre det via sociale medier. Vi opbyggede en online kanal på Instagram, <a href="https://www.instagram.com/noodledoodlezoo/">Noodle Doodle Zoo</a>, hvor vi fokuserede på at markedsføre produktet og vise vores kollektion.<br>Min rolle i projektet omfattede:</p>
+                            <ul class="list-disc list-inside mt-2">
+                                <li>Idegenerering/Ideudvikling</li>
+                                <li>Gennemførelse af interviews og tests</li>
+                                <li>Arbejde med storytelling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class=" w-full h-full md:w-1/3 p-4 project-container school">
+                    <div class=" bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg ">
+                        <img class="w-full h-full object-cover" src="../images/app.png" alt="Iværksætteridé">
+                        <div class="p-6">
+                            <h5 class="text-2xl font-bold" id="cevat-text">Iværksætteridé</h5>
+                            <p class="text-sm">@johnsmith</p>
+                            <p class="mt-4">Til mit afsluttende projekt i multimediedesign udviklede jeg en iværksætteridé, hvor jeg gennem grundig research fandt potentialet for en app til håndværkere. Jeg stod for hele processen, fra idéudvikling og design til kodning og markedsføring af B2B-produktet, og integrerede både Lean Startup- og Design Thinking-modellerne i arbejdet.</p>
+                            <ul class="list-disc list-inside mt-2">
+                                <li>Gennemførelse af interviews og desk research</li>
+                                <li>Udvikling af personas og brugerrejser</li>
+                                <li>Idegenerering/ Test af løsningen</li>
+                                <li>Kodning af en del af prototypen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+    
+                <div class="w-full h-full md:w-1/3 p-4 project-container school">
+                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-full  object-cover" src="../images/kogehandel.png" alt="UX">
+                        <div class="p-6">
+                            <h5 class="text-2xl font-bold" id="cevat-text">UX</h5>
+                            <p class="text-sm"> UX/UI -Design </p>
+                            <p class="text-sm">HTML/ CSS/ JavaScript</p>
+                            <p class="mt-4">Vi samarbejdede med Køge Handel om at øge kundetrafikken. Gennem UX-research identificerede vi problemer som uklare parkeringsregler og navigationsvanskeligheder. Løsningen blev en QR-kode, der hjælper besøgende med at finde regler og butikker.<br>Min rolle i projektet omfattede:</p>
+                            <ul class="list-disc list-inside mt-2">
+                                <li>Gennemførelse af interviews og desk research</li>
+                                <li>Udvikling af personas og brugerrejser</li>
+                                <li>Idegenerering/ Test af løsningen</li>
+                                <li>Kodning af en del af prototypen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-full md:w-1/3 p-4 project-container school">
+                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="../images/2sem.png" alt="Opbygning af Hjemmeside">
+                        <div class="p-6">
+                            <h5 class="text-2xl font-bold" id="cevat-text">Opbygning af Hjemmeside</h5>
+                            <p class="text-sm"> UX/UI -Design </p>
+                            <p class="text-sm">HTML/ CSS/ JavaScript</p>
+                            <p class="mt-4">Her har vi samarbejdet med, <a href="http://www.hmi-tomrermester.dk/"> hmi-tomremester </a> Sammen udviklede vi en imponerende hjemmeside og en målrettet social medie strategi til en start-up tømrervirksomhed. Endvidere kunne vi stolt præsentere en velformuleret hjemmeside til vores kunde.<br> Min rolle i projektet omfattede:</p>
+                            <ul class="list-disc list-inside mt-2">
+                                <li>Undersøgelse af målgruppen/interviews</li>
+                                <li>Udvikling af markedsføringsstrategi</li>
+                                <li>Finde farver og skrifttype/ Design af prototyper</li>
+                                <li>Kodning af dele af projektet</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-full md:w-1/3 p-4 project-container school">
+                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="../images/golf.png" alt="Optimering af Hjemmeside">
+                        <div class="p-6">
+                            <h5 class="text-2xl font-bold" id="cevat-text">Optimering af Hjemmeside</h5>
+                            <p class="text-sm"> UX-Design </p>
+                            <p class="text-sm">HTML/ CSS/ JavaScript</p>
+                            <p class="mt-4">Vi har samarbejdet med en kunde, som driver hjemmesiden <a href="https://www.golfacross.com/"> GolfAcross</a>, hvor målgruppen er golfspillere. Vores opgave var at optimere hjemmesiden ved at gennemføre omfattende tests af både appen og hjemmesiden. Målet var at identificere problemer og derefter arbejde målrettet på at løse dem.<br> Min rolle i projektet omfattede:</p>
+                            <ul class="list-disc list-inside mt-2">
+                                <li>Gennemførelse af interviews og tests</li>
+                                <li>Udarbejdelse af personaer og brugerrejser</li>
+                                <li>Kodning af dele af prototypen</li>
+                                <li>Idegenerering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-full md:w-1/3 p-4 project-container school">
+                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="../images/bookingsystem.png" alt="Opbygning af Bookingsystem">
+                        <div class="p-6">
+                            <h5 class="text-2xl font-bold" id="cevat-text">Opbygning af Bookingsystem</h5>
+                            <p class="text-sm"> UX-Design </p>
+                            <p class="text-sm">Firebase</p>
+                            <p class="mt-4">På tredje semester af multimediedesign har jeg samarbejdet med en kollega om at designe og udvikle et nyt bookingsystem til en psykiatrisk hjemmeside. Projektet involverede tæt samarbejde med kunden og omfattede hele processen fra UX-research og design til kodning af prototypen, hvor fokus var at forbinde systemet til en database ved hjælp af Firebase.<br> Min rolle i projektet omfattede:</p>
+                            <ul class="list-disc list-inside mt-2">
+                                <li>logodesign</li>
+                                <li>Udarbejdelse af personaer og brugerrejser</li>
+                                <li>Kodning af dele af prototypen</li>
+                                <li>Idegenerering og forbindelse med database</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-full md:w-1/3 p-4 project-container personal">
+                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="../images/logodesign.png" alt="Logo Design">
+                        <div class="p-6">
+                            <h5 class="text-2xl font-bold" id="cevat-text">Logo Design</h5>
+                            <p class="text-sm">Grafisk Design</p>
+                            <p class="mt-4">Jeg har designet et logo til en tømrerfirma, der er både enkelt og nemt at huske. Logoet blev brugt på arbejdstøj, arbejdsbil og visitkort.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-full md:w-1/3 p-4 project-container personal">
+                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="../images/bilreklame.png" alt="Design af Bilreklame">
+                        <div class="p-6">
+                            <h5 class="text-2xl font-bold" id="cevat-text">Design af Bilreklame</h5>
+                            <p class="text-sm">Grafisk Design</p>
+                            <p class="mt-4">Som en del af mit designlærlingarbejde har jeg designet en bilreklame for en kunde. Fokus var på at vælge farver og skrifttyper, som allerede er brugt på kundens hjemmeside, for at sikre en sammenhængende visuel identitet. Reklamen præsenterer informationen klart og tydeligt, og sigter mod at øge synligheden og tiltrække flere kunder.</p>
+                            <img src="../images/hmi-bil.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-full md:w-1/3 p-4 project-container personal">
+                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="../images/some.png" alt="Content Creation">
+                        <div class="p-6">
+                            <h5 class="text-2xl font-bold" id="cevat-text">Content Creation</h5>
+                            <p class="text-sm">Grafisk Design/ UX-Design</p>
+                            <p class="mt-4">I min fritid arbejder jeg med content creation for<a href="https://www.instagram.com/hmitomrermester/"> HMI Tømrermester</a> på deres erhvervs-Instagram-konto. <br>Mine opgaver omfatter:</p>
+                            <ul class="list-disc list-inside mt-2">
+                                <li>Design af Instagram highlights</li>
+                                <li>Desk research og idegenerering</li>
+                                <li>Fotografering af projekter</li>
+                                <li>Videoproduktion og -redigering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-full md:w-1/3 p-4 project-container personal">
+                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="../images/visitkort.png" alt="Design af Visitkort">
+                        <div class="p-6">
+                            <h5 class="text-2xl font-bold" id="cevat-text">Design af Visitkort</h5>
+                            <p class="text-sm">Grafisk Design</p>
+                            <p class="mt-4">Jeg har designet et visitkort, der hjælper kunden med at nå ud til sin målgruppe. Fokus var på at skabe et professionelt og mindeværdigt design, der effektivt kommunikerer kundens budskab og brandidentitet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-full md:w-1/3 p-4 project-container personal">
+                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="../images/bilrekale2.png" alt="Bilreklame">
+                        <div class="p-6">
+                            <h5 class="text-2xl font-bold" id="cevat-text">Bilreklame</h5>
+                            <p class="text-sm">Grafisk Design</p>
+                            <p class="mt-4">Jeg samarbejdede med Bygg og renovere om at designe en bilreklame, der afspejler deres visuel identitet med designet på deres hjemmeside.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full h-full md:w-1/3 p-4 project-container personal">
+                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-full object-cover" src="../images/logodesign2.png" alt="Logo Design">
+                        <div class="p-6">
+                            <h5 class="text-2xl font-bold" id="cevat-text">Logo Design</h5>
+                            <p class="text-sm">Grafisk Design</p>
+                            <p class="mt-4">Jeg har designet et logo til et tømrerfirma med fokus på enkelhed og genkendelighed. Logoet er skabt til at være professionelt og anvendeligt på arbejdstøj, køretøjer og markedsføringsmaterialer, alt sammen for at tydeligt afspejle virksomhedens brand.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <img class=" w-full object-cover z-[-1]" src="../images/background.png" alt="Background image">
+
+    <section class="bg-gray-900 py-16" id="om-mig">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap items-center">
+                <!-- Billede -->
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <figure class="w-3/4 md:w-2/3">
+                        <img class="rounded-full shadow-lg" src="../images/my.jpeg" alt="Personal image">
+                    </figure>
+                </div>
+    
+                <!-- Tekst -->
+                <div class="w-full md:w-1/2 text-white mt-6 md:mt-0">
+                    <h1 class="text-4xl font-light">Om mig</h1>
+                    <h4 class="text-xl mt-2" id="cevat-text">En kort rejse gennem min baggrund, passioner og visioner</h4>
+                    <p class="mt-4 text-gray-300 leading-relaxed">
+                        Jeg er en ambitiøs og kreativ
+                        multimediedesigner med en passion
+                        for digital udvikling. Min
+                        interesse for
+                        teknologi og design har drevet mig til at vælge digital udvikling som en valgfag under mit Uddannelse
+                        som
+                        multimediedesigner. Jeg er en teamplayer og nyder at arbejde med andre kreative fagfolk i mit
+                        projektarbejde. Jeg værdsætter feedback og er altid åben for at lære og udvikle mig. <br>
+                        Jeg er god til at effektivt planlægge min tid. Min tendens til at skabe struktur hjælper mig med at
+                        organisere mine omgivelser og opgaver på en velordnet måde.
+                        Jeg er overbevist om, at opmærksomhed for detaljer er afgørende for at levere arbejde af høj kvalitet.
+                        <br>
+                        Yderligere har jeg en hobby inden for fotografering. Jeg nyder at fange
+                        øjeblikke og skabe visuelle historier med mine fotografier.
+                        Denne hobby har lært mig at observere verden på en anden måde og se skønheden i de små
+                        detaljer. Ikke mindst giver mig mulighed for at skabe visuelt tiltalende og meningsfulde
+                        oplevelser for brugerne.
+                    </p>
+                    <a href="./images/CV  Shahad.pdf" target="_blank" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 mt-4 rounded-lg shadow-md transition">
+                        Min CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <img class=" w-full object-cover z-[-1]" src="../images/background.png" alt="Background image">
+
+    <section class=" py-16">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl text-center text-gray-300 text-light">Det siger andre om mig</h1>
+            <h4 class="text-sm text-center mt-2" id="cevat-text">Ærlige ord fra dem, jeg har samarbejdet med</h4>
+    
+            <!-- Carousel Container -->
+            <div class="relative mt-8 overflow-hidden ">
+                <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-carousel">
+                    <!-- Slide 1 -->
+                    <div class="bg-gray-100 text-gray-900 min-w-full flex-shrink-0 p-6 rounded-lg  flex flex-col items-center text-center  ">
+                        <q class="italic block">Shahad har været et aktiv gruppemedlem med gode kommunikationsevner...</q>
+                        <p class="mt-4" id="cevat-text">- Fatime / Studiekammerat</p>
+                    </div>
+                    
+    
+                    <!-- Slide 2 -->
+                    <div class="bg-gray-100 text-gray-900 min-w-full flex-shrink-0 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <q class="italic block">Jeg har arbejdet med Shahad på flere projekter...</q>
+                        <p class="mt-4 "id="cevat-text">- Areen / Studiekammerat</p>
+                    </div>
+    
+                    <!-- Slide 3 -->
+                    <div class="bg-gray-100 text-gray-900 min-w-full flex-shrink-0 p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <q class="italic block">Shahad har imponerende designfærdigheder...</q>
+                        <p class="mt-4 " id="cevat-text">- HMI Tømrermester / Kunde</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Carousel Navigation -->
+            <div class="flex justify-center mt-6 space-x-4">
+                <button id="prev" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">❮</button>
+                <button id="next" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16" id="contact">
+        <div class="container mx-auto">
+            <div class="flex justify-center">
+                <div class="w-full md:w-2/3 lg:w-1/2">
+                    <div class="bg-white shadow-lg rounded-lg p-8">
+                        <h1 class="text-3xl font-bold text-center mb-8" id="cevat-text">Glæder mig til at høre fra dig!</h1>
+    
+                        <!-- Kontaktformular -->
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="6f66cf3b-a9a5-4d5e-87b9-0e7146b8a8b3">
+    
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2">Navn</label>
+                                <input type="text" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Navn" required>
+                            </div>
+    
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2">E-mail</label>
+                                <input type="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="E-mail" required>
+                            </div>
+    
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2">Besked</label>
+                                <textarea name="message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="5" placeholder="Skriv en besked" required></textarea>
+                            </div>
+    
+                            <div class="mb-4">
+                                <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 mt-8 flex flex-col items-center text-center border-t " id="gradient-border">
+        <!-- Footer Icons -->
+        <div class="flex space-x-4 mt-4">
+            <a href="https://github.com/Shahad1991">
+                <img src="../images/github.svg.svg" alt="Github" class="w-8 h-8 transition-transform transform hover:scale-110">
+            </a>
+            <a href="https://www.instagram.com/shahadnazaromhassoni/">
+                <img src="../images/InstagramLogo.svg" alt="Instagram" class="w-8 h-8 transition-transform transform hover:scale-110">
+            </a>
+            <a href="https://www.linkedin.com/in/shahad-al-jawashee-41502a24b/">
+                <img src="../images/linkdin.svg" alt="LinkedIn" class="w-8 h-8 transition-transform transform hover:scale-110">
+            </a>
+        </div>
+        
+    
+        <!-- Footer Links -->
+        <ul class="flex gap-8 mb-5   mt-8 text-gray-300">
+            <li><a href="#hero-image" class="text-light text-lg hover:text-[#EED5A2]">Hjem</a></li>
+            <li><a href="#om-mig" class="text-light text-lg hover:text-[#EED5A2]">Om</a></li>
+            <li><a href="#projekter" class="text-light text-lg hover:text-[#EED5A2]">Projekter</a></li>
+            <li><a href="#contact" class="text-light text-lg hover:text-[#EED5A2]">Kontakt</a></li>
+        </ul>
+    
+        <!-- Copyright Text -->
+        <p class="mt-5 text-sm text-light" id="cevat-text">
+            &copy; 2024 Shahad. All rights reserved
+        </p>
+    </footer>
+    <script src="index.js"></script>
+      
+</body>
+</html>

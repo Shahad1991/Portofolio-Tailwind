@@ -15,7 +15,7 @@
             <a class="text-light" href="#hero-image" id="cevat-text">
                 Shahad
             </a>
-            <div class="hidden lg:flex lg:items-center lg:justify-end text-light text-gray-300" id="nav-links">
+            <div class="hidden lg:flex lg:items-center lg:justify-end text-light text-gray-300 flex-col lg:flex-row " id="nav-links">
                 <a class="text-light mx-2" href="#hero-image">Hjem</a>
                 <a class="text-light mx-2" href="#om-mig">Om mig</a>
                 <a class="text-light mx-2" href="#projekter">Projekter</a>
@@ -42,9 +42,9 @@
                 <div class="md:w-3/5  flex-col items-center">
                     
                    
-                        <h2 id="cevat-text" class="text-2xl font-caveat">Velkommen til min verden</h2>
-                        <h1 class="text-4xl font-bold text-light text-gray-300">Mit navn er Shahad,</h1>
-                        <h1 class="text-4xl font-bold text-light text-gray-300">og jeg er <span class="text-primary">Webudvikler</span></h1>
+                        <h2 id="cevat-text" class="text-2xl pb-6">Velkommen til min verden</h2>
+                        <h1 class="text-4xl">Mit navn er Shahad,</h1>
+                        <h1 class="text-4xl">og jeg er <span class="text-primary">Webudvikler</span></h1>
                         <div class="flex space-x-4 mt-4">
                             <a href="https://github.com/Shahad1991">
                                 <img src="./images/github.svg.svg" alt="Github" class="w-8 h-8 transition-transform transform hover:scale-110">
@@ -63,9 +63,8 @@
 
                 <!-- Højre kolonne med billede -->
                 <div class="md:w-2/5 relative mt-8 md:mt-0">
-                    <div class="w-full relative bg-no-repeat bg-cover h-[500px] rounded-xl overflow-hidden">
-                        <div class="absolute inset-0 bg-no-repeat bg-right w-full h-full" style="background-image: url('/images/hero-background.png'); z-index: -1;"></div>
-                        <img class="w-full rounded-t-lg" src="./images/myimag.png" alt="Hero image">
+                    <div class="w-full relative bg-no-repeat bg-cover h-[500px] rounded-xl overflow-hidden hero-background">
+                        <img class="w-full full-rounded " src="./images/myimag.png" alt="Hero image">
                     </div>
                 </div>
         </div>
@@ -78,13 +77,13 @@
                 <h4 class="text-xl text-light mt-2" id="cevat-text">et indblik i mine kreative projekter</h4>
             </div>
             <div class="text-center mb-8">
-                <button id="btn-all" class="px-4 py-2 border-2 text-white bg-transparent rounded-full focus:outline-none transition-colors duration-300 relative" onclick="filterSelection('all', this)" id="gradient-border">
+                <button class="btn p-2" id=" btn-all" class="px-4 py-2 border-2 text-white bg-transparent rounded-full focus:outline-none transition-colors duration-300 relative" onclick="filterSelection('all', this)" id="gradient-border">
                     Alle
                 </button>
-                <button id="btn-school" class="px-4 py-2 border-2 text-white bg-transparent rounded-full focus:outline-none transition-colors duration-300 relative" onclick="filterSelection('school', this)" id="gradient-border">
+                <button class="btn p-2"id="btn-school" class="px-4 py-2 border-2 text-white bg-transparent rounded-full focus:outline-none transition-colors duration-300 relative" onclick="filterSelection('school', this)" id="gradient-border">
                     Skole Projekter
                 </button>
-                <button id="btn-personal" class="px-4 py-2 border-2 text-white bg-transparent rounded-full focus:outline-none transition-colors duration-300 relative" onclick="filterSelection('personal', this)" id="gradient-border">
+                <button class="btn p-2"id="btn-personal" class="px-4 py-2 border-2 text-white bg-transparent rounded-full focus:outline-none transition-colors duration-300 relative" onclick="filterSelection('personal', this)" id="gradient-border">
                     Personlige Projekter
                 </button>
             </div>
@@ -92,11 +91,11 @@
             
             <div id="project-list" class="flex flex-wrap justify-center">
                 <div class="w-full h-full md:w-1/3 p-4 project-container school ">
-                    <div class=" bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                    <div class=" card rounded-lg overflow-hidden">
                         <img class="w-full h-full object-cover " src="./images/e-commerce.png" alt="E-Commerce">
                         <div class="p-6">
                             <h5 class="text-2xl font-bold" id="cevat-text">E-Commerce</h5>
-                            <p class="text-sm">@johnsmith</p>
+                           
                             <p class="mt-4">Vi arbejdede med Lean Startup-processen for at designe en unik T-shirt og lancere en webshop, hvor vi sælger produktet. Ideen var at skabe et unikt design og markedsføre det via sociale medier. Vi opbyggede en online kanal på Instagram, <a href="https://www.instagram.com/noodledoodlezoo/">Noodle Doodle Zoo</a>, hvor vi fokuserede på at markedsføre produktet og vise vores kollektion.<br>Min rolle i projektet omfattede:</p>
                             <ul class="list-disc list-inside mt-2">
                                 <li>Idegenerering/Ideudvikling</li>
@@ -107,11 +106,11 @@
                     </div>
                 </div>
                 <div class=" w-full h-full md:w-1/3 p-4 project-container school">
-                    <div class=" bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg ">
+                    <div class="card rounded-lg overflow-hidden">
                         <img class="w-full h-full object-cover" src="./images/app.png" alt="Iværksætteridé">
                         <div class="p-6">
                             <h5 class="text-2xl font-bold" id="cevat-text">Iværksætteridé</h5>
-                            <p class="text-sm">@johnsmith</p>
+                            
                             <p class="mt-4">Til mit afsluttende projekt i multimediedesign udviklede jeg en iværksætteridé, hvor jeg gennem grundig research fandt potentialet for en app til håndværkere. Jeg stod for hele processen, fra idéudvikling og design til kodning og markedsføring af B2B-produktet, og integrerede både Lean Startup- og Design Thinking-modellerne i arbejdet.</p>
                             <ul class="list-disc list-inside mt-2">
                                 <li>Gennemførelse af interviews og desk research</li>
@@ -125,12 +124,11 @@
 
     
                 <div class="w-full h-full md:w-1/3 p-4 project-container school">
-                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                    <div class=" card rounded-lg overflow-hidden">
                         <img class="w-full h-full  object-cover" src="./images/kogehandel.png" alt="UX">
                         <div class="p-6">
                             <h5 class="text-2xl font-bold" id="cevat-text">UX</h5>
-                            <p class="text-sm"> UX/UI -Design </p>
-                            <p class="text-sm">HTML/ CSS/ JavaScript</p>
+                            
                             <p class="mt-4">Vi samarbejdede med Køge Handel om at øge kundetrafikken. Gennem UX-research identificerede vi problemer som uklare parkeringsregler og navigationsvanskeligheder. Løsningen blev en QR-kode, der hjælper besøgende med at finde regler og butikker.<br>Min rolle i projektet omfattede:</p>
                             <ul class="list-disc list-inside mt-2">
                                 <li>Gennemførelse af interviews og desk research</li>
@@ -142,12 +140,11 @@
                     </div>
                 </div>
                 <div class="w-full h-full md:w-1/3 p-4 project-container school">
-                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                    <div class=" card rounded-lg overflow-hidden">
                         <img class="w-full h-full object-cover" src="./images/2sem.png" alt="Opbygning af Hjemmeside">
                         <div class="p-6">
                             <h5 class="text-2xl font-bold" id="cevat-text">Opbygning af Hjemmeside</h5>
-                            <p class="text-sm"> UX/UI -Design </p>
-                            <p class="text-sm">HTML/ CSS/ JavaScript</p>
+                        
                             <p class="mt-4">Her har vi samarbejdet med, <a href="http://www.hmi-tomrermester.dk/"> hmi-tomremester </a> Sammen udviklede vi en imponerende hjemmeside og en målrettet social medie strategi til en start-up tømrervirksomhed. Endvidere kunne vi stolt præsentere en velformuleret hjemmeside til vores kunde.<br> Min rolle i projektet omfattede:</p>
                             <ul class="list-disc list-inside mt-2">
                                 <li>Undersøgelse af målgruppen/interviews</li>
@@ -159,12 +156,11 @@
                     </div>
                 </div>
                 <div class="w-full h-full md:w-1/3 p-4 project-container school">
-                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                    <div class=" card rounded-lg overflow-hidden">
                         <img class="w-full h-full object-cover" src="./images/golf.png" alt="Optimering af Hjemmeside">
                         <div class="p-6">
                             <h5 class="text-2xl font-bold" id="cevat-text">Optimering af Hjemmeside</h5>
-                            <p class="text-sm"> UX-Design </p>
-                            <p class="text-sm">HTML/ CSS/ JavaScript</p>
+                           
                             <p class="mt-4">Vi har samarbejdet med en kunde, som driver hjemmesiden <a href="https://www.golfacross.com/"> GolfAcross</a>, hvor målgruppen er golfspillere. Vores opgave var at optimere hjemmesiden ved at gennemføre omfattende tests af både appen og hjemmesiden. Målet var at identificere problemer og derefter arbejde målrettet på at løse dem.<br> Min rolle i projektet omfattede:</p>
                             <ul class="list-disc list-inside mt-2">
                                 <li>Gennemførelse af interviews og tests</li>
@@ -176,12 +172,11 @@
                     </div>
                 </div>
                 <div class="w-full h-full md:w-1/3 p-4 project-container school">
-                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                    <div class=" card rounded-lg overflow-hidden">
                         <img class="w-full h-full object-cover" src="./images/bookingsystem.png" alt="Opbygning af Bookingsystem">
                         <div class="p-6">
                             <h5 class="text-2xl font-bold" id="cevat-text">Opbygning af Bookingsystem</h5>
-                            <p class="text-sm"> UX-Design </p>
-                            <p class="text-sm">Firebase</p>
+                            
                             <p class="mt-4">På tredje semester af multimediedesign har jeg samarbejdet med en kollega om at designe og udvikle et nyt bookingsystem til en psykiatrisk hjemmeside. Projektet involverede tæt samarbejde med kunden og omfattede hele processen fra UX-research og design til kodning af prototypen, hvor fokus var at forbinde systemet til en database ved hjælp af Firebase.<br> Min rolle i projektet omfattede:</p>
                             <ul class="list-disc list-inside mt-2">
                                 <li>logodesign</li>
@@ -193,7 +188,7 @@
                     </div>
                 </div>
                 <div class="w-full h-full md:w-1/3 p-4 project-container personal">
-                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                    <div class=" card rounded-lg overflow-hidden">
                         <img class="w-full h-full object-cover" src="./images/logodesign.png" alt="Logo Design">
                         <div class="p-6">
                             <h5 class="text-2xl font-bold" id="cevat-text">Logo Design</h5>
@@ -203,7 +198,7 @@
                     </div>
                 </div>
                 <div class="w-full h-full md:w-1/3 p-4 project-container personal">
-                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                    <div class=" card rounded-lg overflow-hidden">
                         <img class="w-full h-full object-cover" src="./images/bilreklame.png" alt="Design af Bilreklame">
                         <div class="p-6">
                             <h5 class="text-2xl font-bold" id="cevat-text">Design af Bilreklame</h5>
@@ -214,7 +209,7 @@
                     </div>
                 </div>
                 <div class="w-full h-full md:w-1/3 p-4 project-container personal">
-                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                    <div class=" card rounded-lg overflow-hidden">
                         <img class="w-full h-full object-cover" src="./images/some.png" alt="Content Creation">
                         <div class="p-6">
                             <h5 class="text-2xl font-bold" id="cevat-text">Content Creation</h5>
@@ -230,7 +225,7 @@
                     </div>
                 </div>
                 <div class="w-full h-full md:w-1/3 p-4 project-container personal">
-                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                    <div class=" card rounded-lg overflow-hidden">
                         <img class="w-full h-full object-cover" src="./images/visitkort.png" alt="Design af Visitkort">
                         <div class="p-6">
                             <h5 class="text-2xl font-bold" id="cevat-text">Design af Visitkort</h5>
@@ -240,7 +235,7 @@
                     </div>
                 </div>
                 <div class="w-full h-full md:w-1/3 p-4 project-container personal">
-                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                    <div class=" card rounded-lg overflow-hidden">
                         <img class="w-full h-full object-cover" src="./images/bilrekale2.png" alt="Bilreklame">
                         <div class="p-6">
                             <h5 class="text-2xl font-bold" id="cevat-text">Bilreklame</h5>
@@ -250,7 +245,7 @@
                     </div>
                 </div>
                 <div class="w-full h-full md:w-1/3 p-4 project-container personal">
-                    <div class="bg-gray-100 text-light rounded-lg overflow-hidden shadow-lg">
+                    <div class=" card rounded-lg overflow-hidden">
                         <img class="w-full h-full object-cover" src="./images/logodesign2.png" alt="Logo Design">
                         <div class="p-6">
                             <h5 class="text-2xl font-bold" id="cevat-text">Logo Design</h5>
@@ -298,7 +293,7 @@
                         detaljer. Ikke mindst giver mig mulighed for at skabe visuelt tiltalende og meningsfulde
                         oplevelser for brugerne.
                     </p>
-                    <a href="./images/CV  Shahad.pdf" target="_blank" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 mt-4 rounded-lg shadow-md transition">
+                    <a href="./images/CV  Shahad.pdf" target="_blank" class="inline-block btn mt-4 p-2" >
                         Min CV
                     </a>
                 </div>
@@ -339,17 +334,17 @@
     
             <!-- Carousel Navigation -->
             <div class="flex justify-center mt-6 space-x-4">
-                <button id="prev" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">❮</button>
-                <button id="next" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">❯</button>
+                <button id="prev" class="btn py-2 px-4">❮</button>
+                <button id="next"class= "btn py-2 px-4">❯</button>
             </div>
         </div>
     </section>
 
     <section class="py-16" id="contact">
-        <div class="container mx-auto">
+        <div class="container mx-auto ">
             <div class="flex justify-center">
                 <div class="w-full md:w-2/3 lg:w-1/2">
-                    <div class="bg-white shadow-lg rounded-lg p-8">
+                    <div class="card rounded-lg p-8">
                         <h1 class="text-3xl font-bold text-center mb-8" id="cevat-text">Glæder mig til at høre fra dig!</h1>
     
                         <!-- Kontaktformular -->
@@ -372,7 +367,7 @@
                             </div>
     
                             <div class="mb-4">
-                                <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send</button>
+                                <button type="submit" class="w-full btn py-2 px-4 rounded focus:outline-none focus:shadow-outline">Send</button>
                             </div>
                         </form>
                     </div>
@@ -381,7 +376,7 @@
         </div>
     </section>
 
-    <footer class="py-5 mt-8 flex flex-col items-center text-center border-t " id="gradient-border">
+    <footer class="py-5 mt-8 flex flex-col items-center text-center border-top" id="gradient-border">
         <!-- Footer Icons -->
         <div class="flex space-x-4 mt-4">
             <a href="https://github.com/Shahad1991">
@@ -397,7 +392,7 @@
         
     
         <!-- Footer Links -->
-        <ul class="flex gap-8 mb-5   mt-8 text-gray-300">
+        <ul class="flex gap-8 mb-5   mt-8">
             <li><a href="#hero-image" class="text-light text-lg hover:text-[#EED5A2]">Hjem</a></li>
             <li><a href="#om-mig" class="text-light text-lg hover:text-[#EED5A2]">Om</a></li>
             <li><a href="#projekter" class="text-light text-lg hover:text-[#EED5A2]">Projekter</a></li>
@@ -411,6 +406,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
     <script src="./index.js"></script>
+    
       
 </body>
 </html>

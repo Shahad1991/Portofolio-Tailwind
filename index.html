@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/output.css">
 
     <title>Tailwind Portfolio</title>
 </head>
-<body class="bg-gray-900">
+<body>
 
-    <nav class="py-6 relative border-b border-transparent before:absolute before:left-0 before:bottom-0 before:w-full before:h-[4px] before:bg-[linear-gradient(90deg,#FFEAC2,#EED5A2,#745D29)]" id="gradient-border">
-        <div class="container mx-auto flex justify-between items-center" id="gradient-border-bottom">
-            <a class="text-light" href="#hero-image" id="cevat-text">
+    <nav class="py-6 mb-5 " id="border-style">
+        <div class="container mx-auto flex justify-between items-center" >
+            <a class="" href="#hero-image" id="cevat-text">
                 Shahad
             </a>
-            <div class="hidden lg:flex lg:items-center lg:justify-end text-light text-gray-300 flex-col lg:flex-row " id="nav-links">
-                <a class="text-light mx-2" href="#hero-image">Hjem</a>
-                <a class="text-light mx-2" href="#om-mig">Om mig</a>
-                <a class="text-light mx-2" href="#projekter">Projekter</a>
-                <a class="text-light mx-2" href="../images/CV Shahad.pdf" target="_blank">CV</a>
-                <a class="text-light mx-2" href="#contact">Kontakt</a>
+            <div class="hidden lg:flex lg:items-center text-light flex-col lg:flex-row " id="nav-links">
+                <a class="text-light mx-4" href="#hero-image">Hjem</a>
+                <a class="text-light mx-4" href="#om-mig">Om mig</a>
+                <a class="text-light mx-4" href="#projekter">Projekter</a>
+                <a class="text-light mx-4" href="../images/CV Shahad.pdf" target="_blank">CV</a>
+                <a class="text-light mx-4" href="#contact">Kontakt</a>
             </div>
             <button class="block lg:hidden p-4" id="burger" aria-expanded="false">
                 <img src="./images/menu-kopi.svg" alt="Menu" class="w-8 h-8">
@@ -28,7 +28,7 @@
         </div>
     </nav>
 
-      <section id="hero-image" class="h-screen flex items-center bg-gray-900">
+      <section id="hero-image" class="h-screen flex items-center">
         <div class="container mx-auto">
             <div class="flex flex-col md:flex-row items-center">
               
@@ -39,10 +39,8 @@
                  
                  
                 
-                <div class="md:w-3/5  flex-col items-center">
-                    
-                   
-                        <h2 id="cevat-text" class="text-2xl pb-6">Velkommen til min verden</h2>
+                <div class="md:w-3/5  flex-col items-center px-4 md:px-0">
+                        <h2 id="cevat-text" class="text-2xl pb-6 pt-3">Velkommen til min verden</h2>
                         <h1 class="text-4xl">Mit navn er Shahad,</h1>
                         <h1 class="text-4xl">og jeg er <span class="text-primary">Webudvikler</span></h1>
                         <div class="flex space-x-4 mt-4">
@@ -62,9 +60,9 @@
                 
 
                 <!-- Højre kolonne med billede -->
-                <div class="md:w-2/5 relative mt-8 md:mt-0">
-                    <div class="w-full relative bg-no-repeat bg-cover h-[500px] rounded-xl overflow-hidden hero-background">
-                        <img class="w-full full-rounded " src="./images/myimag.png" alt="Hero image">
+                <div class="md:w-2/5 relative mt-8 md:mt-0 bg-[url(./images/hero-background.png')]">
+                    <div class="w-full relative bg-no-repeat bg-cover h-[500px] rounded-xl overflow-hidden ">
+                        <img class="rounded-5xl " src="./images/myimag.png" alt="Hero image">
                     </div>
                 </div>
         </div>
@@ -376,7 +374,7 @@
         </div>
     </section>
 
-    <footer class="py-5 mt-8 flex flex-col items-center text-center border-top" id="gradient-border">
+    <footer class="py-5 mt-8 flex flex-col items-center text-center" id="border-style">
         <!-- Footer Icons -->
         <div class="flex space-x-4 mt-4">
             <a href="https://github.com/Shahad1991">
